@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英語の筆記体ジェネレーター | 無料英文筆記体変換ツール</title>
+    <meta name="description" content="英語の筆記体を簡単に生成できる無料ツールです。様々な筆記体フォントから選択でき、サイズ調整も可能。英語の署名、メッセージカード、招待状などに最適な筆記体を見つけられます。">
+    <meta name="keywords" content="筆記体,筆記体変換,筆記体英語,英語筆記体,英文筆記体,カリグラフィー,署名,英語署名">
+    
+    <!-- OGP Tags -->
+    <meta property="og:title" content="英語の筆記体ジェネレーター | 無料英文筆記体変換ツール">
+    <meta property="og:description" content="英語の筆記体を簡単に生成できる無料ツール。署名やメッセージカードに最適な筆記体フォントを提供。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/">
+    
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "英語の筆記体ジェネレーター",
+      "description": "英語の筆記体を簡単に生成できる無料オンラインツール",
+      "applicationCategory": "DesignApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "JPY"
+      }
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Carattere&family=Pinyon+Script&family=Lovers+Quarrel&family=Rouge+Script&family=Tangerine&family=Great+Vibes&family=Playball&family=Alex+Brush&family=Sacramento&family=Parisienne&family=Berkshire+Swash&family=League+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/[your-kit-code].css">
+    <link href="https://cdn.fontsgeek.com/fonts/League-Script-Regular.woff2" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+    <!-- 当前语言为西班牙语时显示的meta标签 -->
+    <template id="es-meta">
+        <title>Letra Cursiva Online | Generador de Letra Cursiva Gratis</title>
+        <meta name="description" content="Generador de letra cursiva online gratis. Convierte texto normal en letra cursiva elegante. Ideal para firmas, invitaciones, tarjetas y caligrafía inglesa.">
+        <meta name="keywords" content="letra cursiva, letra cursiva online, generador letra cursiva, caligrafía inglesa, letra cursiva elegante, escribir en cursiva, convertidor texto cursiva">
+        
+        <!-- OGP Tags -->
+        <meta property="og:title" content="Letra Cursiva Online | Generador de Letra Cursiva Gratis">
+        <meta property="og:description" content="Generador de letra cursiva online gratis. Convierte texto normal en letra cursiva elegante.">
+        <meta property="og:locale" content="es_ES">
+    </template>
+
+    <!-- 添加英文版meta信息 -->
+    <template id="en-meta">
+        <title>Cursive Letters Generator | Convert Text to Cursive Writing Online</title>
+        <meta name="description" content="Free online cursive letters generator. Convert regular text into beautiful cursive letters. Create elegant signatures, wedding cards, and social media text with our cursive writing tool.">
+        <meta name="keywords" content="cursive letters, cursive letters generator, cursive writing, convert to cursive, cursive text converter, cursive font generator, cursive writing generator">
+        
+        <!-- OGP Tags -->
+        <meta property="og:title" content="Cursive Letters Generator | Convert Text to Cursive Writing">
+        <meta property="og:description" content="Transform your text into beautiful cursive letters. Free online tool for creating signatures, invitations and social media content.">
+        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="website">
+        <link rel="canonical" href="https://yourwebsite.com/cursive-letters-generator" />
+    </template>
+</head>
+<body>
+    <div class="container">
+        <div class="language-selector">
+            <select id="languageSelect" onchange="changeLanguage()">
+                <option value="ja">🇯🇵 日本語</option>
+                <option value="es">🇪🇸 Español</option>
+                <option value="en">🇺🇸 English</option>
+            </select>
+        </div>
+        <h1>英語の筆記体ジェネレーター</h1>
+        <p class="service-description">
+            様々な英語の筆記体フォントを無料で試せるツールです。署名、メッセージカード、招待状などにご活用ください。
+        </p>
+        <div class="input-section">
+            <textarea id="inputText" placeholder="ここに英文を入力してください..." oninput="convertText()">Happy Birthday!</textarea>
+            <div class="controls">
+                <div class="font-control">
+                    <div class="font-select-group">
+                        <label>フォント：</label>
+                        <select id="fontSelect" onchange="convertText()">
+                            <option value="Parisienne">1. Parisienne</option>
+                            <option value="Great Vibes">2. Great Vibes</option>
+                            <option value="Alex Brush">3. Alex Brush</option>
+                            <option value="Sacramento">4. Sacramento</option>
+                            <option value="Rouge Script">5. Rouge Script</option>
+                            <option value="Pinyon Script">6. Pinyon Script</option>
+                            <option value="Carattere">7. Carattere</option>
+                            <option value="Tangerine">8. Tangerine</option>
+                            <option value="Playball">9. Playball</option>
+                            <option value="Berkshire Swash">10. Berkshire Swash</option>
+                            <option value="Lovers Quarrel">11. Lovers Quarrel</option>
+                        </select>
+                        <a href="#font-samples" class="sample-link">（筆記体フォントの見本）</a>
+                    </div>
+                </div>
+                <div class="controls-secondary">
+                    <div class="background-control">
+                        <label>背景：</label>
+                        <div class="bg-buttons">
+                            <button class="bg-btn active" data-bg="white" onclick="updateBackground('white')">
+                                <span class="bg-preview bg-white"></span>
+                            </button>
+                            <button class="bg-btn" data-bg="black" onclick="updateBackground('black')">
+                                <span class="bg-preview bg-black"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="size-control">
+                        <label>サイズ：</label>
+                        <input type="range" id="sizeSlider" min="24" max="200" value="48" oninput="updateSize()">
+                        <span id="sizeValue">48px</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="output-section" id="outputSection">
+            <p id="outputText"></p>
+        </div>
+
+        <div class="font-showcase">
+            <h2 class="showcase-title" id="font-samples">日本のInstagramで人気の筆記体フォント</h2>
+            <div class="font-samples">
+                <div class="font-sample">
+                    <h3>1. Parisienne</h3>
+                    <p style="font-family: 'Parisienne';">Happy Birthday</p>
+                    <div class="divider"></div>
+                </div>
+                <div class="font-sample">
+                    <h3>2. Great Vibes</h3>
+                    <p style="font-family: 'Great Vibes';">Happy Birthday</p>
+                    <div class="divider"></div>
+                </div>
+                <div class="font-sample">
+                    <h3>3. Alex Brush</h3>
+                    <p style="font-family: 'Alex Brush';">Happy Birthday</p>
+                    <div class="divider"></div>
+                </div>
+                <div class="font-sample">
+                    <h3>4. Sacramento</h3>
+                    <p style="font-family: 'Sacramento';">Happy Birthday</p>
+                    <div class="divider"></div>
+                </div>
+                <div class="font-sample">
+                    <h3>5. Rouge Script</h3>
+                    <p style="font-family: 'Rouge Script';">Happy Birthday</p>
+                    <div class="divider"></div>
+                </div>
+                <div class="font-sample">
+                    <h3>6. Pinyon Script</h3>
+                    <p style="font-family: 'Pinyon Script';">Happy Birthday</p>
+                    <div class="divider"></div>
+                </div>
+                <div class="font-sample">
+                    <h3>7. Carattere</h3>
+                    <p style="font-family: 'Carattere';">Happy Birthday</p>
+                    <div class="divider"></div>
+                </div>
+                <div class="font-sample">
+                    <h3>8. Tangerine</h3>
+                    <p style="font-family: 'Tangerine';">Happy Birthday</p>
+                    <div class="divider"></div>
+                </div>
+                <div class="font-sample">
+                    <h3>9. Playball</h3>
+                    <p style="font-family: 'Playball';">Happy Birthday</p>
+                    <div class="divider"></div>
+                </div>
+                <div class="font-sample">
+                    <h3>10. Berkshire Swash</h3>
+                    <p style="font-family: 'Berkshire Swash';">Happy Birthday</p>
+                    <div class="divider"></div>
+                </div>
+                <div class="font-sample">
+                    <h3>11. Lovers Quarrel</h3>
+                    <p style="font-family: 'Lovers Quarrel';">Happy Birthday</p>
+                    <div class="divider"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
