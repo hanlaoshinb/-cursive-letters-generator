@@ -51,7 +51,7 @@ const translations = {
         backgroundLabel: "背景：",
         sizeLabel: "サイズ：",
         placeholder: "ここに英文を入力してください...",
-        showcaseTitle: "日本のInstagramで人気の筆記体フォント"
+        showcaseTitle: "人気の筆記体フォント一覧"
     },
     es: {
         title: "Generador AI de Letra Cursiva | Crea Texto Cursivo con Inteligencia Artificial",
